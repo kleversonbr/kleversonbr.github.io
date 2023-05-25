@@ -42,6 +42,7 @@ export class AppComponent {
 
 
     console.log('Código Colado!');
+    //teste
     alert("Código copiado para a área de transferência!")
 
   }
