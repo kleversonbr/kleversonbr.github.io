@@ -7,7 +7,7 @@
   }
 
   .comment-row:hover .comment-options {
-    display: block;
+    display: contents;
   }
 
   .avatar, .response-avatar {
@@ -157,7 +157,7 @@
   }
 
   .user-comment-space > textarea {
-    overflow: hidden;
+    overflow: visible;
     resize: none;
     width: 93%;
     color: #050505;
@@ -232,5 +232,5 @@
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    cursor: not-allowed;
+    cursor: auto;
   }

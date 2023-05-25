@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FiltroComponent } from './filtro/filtro.component';
 import { ComentarioComponent } from './comentario/comentario.component';
 import { CodigoComponent } from './codigo/codigo.component';
+import { RespostaComponent } from './resposta/resposta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiltroComponent,
     ComentarioComponent,
-    CodigoComponent
+    CodigoComponent,
+    RespostaComponent
   ],
   imports: [
     BrowserModule,

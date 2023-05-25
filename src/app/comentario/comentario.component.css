@@ -1,5 +1,5 @@
 .comment-container {
-    width: max-content;
+    width: 450px;
     display: inline-flex;
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -141,7 +141,8 @@
   }
 
   .like-counter > img {
-    padding-right: 5px;
+    padding-right: 0px;
+    margin-right: 5px;
   }
 
   .blue-like {
@@ -160,12 +161,14 @@
     overflow: hidden;
     resize: none;
     width: 93%;
-    color: #050505;
+    color: #222222;
     border: none;
     outline: none;
     background: transparent;
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 15px;
+
   }
 
   .emoji-container {
