@@ -1,0 +1,25 @@
+<div class="comments" delay="0" >
+    <div class="comment-row">
+      <div class="comment-container">
+          <div class="profile-avatar">
+              <div class="avatar" style="
+                  background-image: url('{{ pessoa.foto }}');
+              "></div>
+          </div>
+          <div class="comment-content" id="comment-content">
+              <div class="comment">
+                  <p class="profile-name">{{ pessoa.nome }}</p>
+                  <p class="comment-textarea">{{ pessoa.descricao }}</p>
+              </div>
+              <div class="like-counter">
+                <span class="like-counter-count" id="like-0">{{ pessoa.curtidas }}</span>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="actions">
+      <p onclick="like('like-0', this)">Curtir</p> <div class="action-divider"></div> <p>Responder</p> <div class="action-divider"></div>
+      <p style="font-weight: normal">{{ pessoa.tempo }} min</p>
+    </div>
+</div>
+

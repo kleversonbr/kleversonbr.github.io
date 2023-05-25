@@ -1,0 +1,23 @@
+
+<app-filtro (pessoaAdicionada)="aoAdicionar($event)"></app-filtro>
+<div class="container" >
+  <label for="codigo" class="form-label">Visualização:</label>
+  <div class="card" style="width: 100%; padding: 15px;">
+    <div id="codigo">
+      <div class="row" *ngFor="let comentario of pessoa">
+        <app-comentario [pessoa]="comentario"></app-comentario>
+      </div>
+
+      <div class="row" *ngIf="pessoa"> 
+      </div>
+    </div>
+  </div>
+  <!--app-codigo></app-codigo-->
+
+  <div class="container" *ngIf="pessoa">
+    <br>
+    <button type="button" class="btn btn-primary" (click)="copiarCodigo()">Copiar Código</button>
+    <br><br>
+    <textarea style="width: 100%; scroll-behavior: inherit;"  rows="8" id="texto"></textarea>
+  </div>
+

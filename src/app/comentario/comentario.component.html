@@ -1,0 +1,263 @@
+  <div style="
+      width: 90%;
+      display: inline-flex;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      max-width: 98%;
+      margin-left: 0px; 
+      margin-top: 10px;">
+
+        <div style="margin-right: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            background-size: cover;
+            background-position: center;
+            background-image: url('{{ pessoa.foto }}');
+        "></div>
+
+    <div style="
+      border-radius: 18px;
+      background: #f0f2f5;
+      padding: 10px 15px 10px 15px;
+      width: 100%;
+      position: relative;
+    ">                
+            <textarea rows="1" 
+              style="font-weight: bold;
+                  overflow: hidden;
+                  resize: none;
+                  width: 93%;
+                  color: #222222;
+                  border: none;
+                  outline: none;
+                  background: transparent;
+                  font-family: 'Roboto', sans-serif;
+                  font-weight: 400;
+                  font-size: 15px;
+              ">{{ pessoa.nome }} </textarea>           
+            <textarea style="
+                overflow: hidden;
+                resize: none;
+                width: 93%;
+                color: #222222;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 15px;"
+              rows="2">{{ pessoa.descricao }} </textarea>
+    
+        <div style="
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%);
+            background: white;
+            width: max-content;
+            border-radius: 15px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-width: 30px;
+            padding: 5px;
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            color: #65676B;
+            font-weight: 400;
+            cursor: pointer;">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            <span style="margin-left: 5px;">
+              <textarea rows="1" style="background-color: transparent; border: none; 
+                outline: none; color: #65676B; font-size: 12px; margin-top: 5px; margin-right: 0px;
+                resize: none; width: 23px; font-weight: normal">{{ pessoa.curtidas }} </textarea>
+              </span>
+        </div>
+    </div>
+  </div>
+  <div style="    
+      display: inline-flex;
+      align-items: center;
+      margin-left: 35px;
+      margin-top: -15px;
+      margin-bottom: 10px;">
+    <p style="    
+        color: #919398;
+        font-size: 11px;
+        margin-right: 5px;
+        margin-left: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;">
+    Curtir</p> <div style="   
+      width: 2px;
+      height: 2px;
+      background: #919398;
+      border-radius: 100%;"></div> 
+    <p style="    
+        color: #919398;
+        font-size: 11px;
+        margin-right: 5px;
+        margin-left: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;">
+      Responder</p> <div style="   
+        width: 2px;
+        height: 2px;
+        background: #919398;
+        border-radius: 100%;"></div> 
+    <textarea rows="1" style="
+        background-color: 
+        transparent; border: none; 
+        outline: none; color: #65676B; 
+        font-size: 11px; margin-top: -15px; 
+        margin-right: -10px;
+        resize: none; width: 23px; 
+        font-weight: normal">{{ pessoa.tempo }} </textarea> 
+      <p style="
+            color: #919398;
+            font-size: 11px;
+            margin-right: 5px;
+            margin-left: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-weight: normal"> min</p>
+  </div>
+  
+
+
+  <div *ngIf="pessoa.temResposta">
+
+    <div style="
+      width: 90%;
+      display: inline-flex;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      max-width: 98%;
+      margin-left: 45px; 
+      margin-top: 10px;">
+
+      <div style="margin-right: 10px;
+          width: 32px;
+          height: 32px;
+          border-radius: 100%;
+          background-size: cover;
+          background-position: center;
+          background-image: url('{{ pessoa.resposta.foto }}');
+      "></div>
+         <div style="
+         border-radius: 18px;
+         background: #f0f2f5;
+         padding: 10px 15px 10px 15px;
+         width: 100%;
+         position: relative;
+       ">                
+               <textarea rows="1" 
+                 style="font-weight: bold;
+                     overflow: hidden;
+                     resize: none;
+                     width: 93%;
+                     color: #222222;
+                     border: none;
+                     outline: none;
+                     background: transparent;
+                     font-family: 'Roboto', sans-serif;
+                     font-weight: 400;
+                     font-size: 15px;
+                 ">{{ pessoa.resposta.nome }} </textarea>           
+               <textarea style="
+                   overflow: hidden;
+                   resize: none;
+                   width: 93%;
+                   color: #222222;
+                   border: none;
+                   outline: none;
+                   background: transparent;
+                   font-family: 'Roboto', sans-serif;
+                   font-weight: 400;
+                   font-size: 15px;"
+                 rows="2">{{ pessoa.resposta.descricao }} </textarea>
+       
+           <div style="
+               box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%);
+               background: white;
+               width: max-content;
+               border-radius: 15px;
+               font-size: 13px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               text-align: center;
+               min-width: 30px;
+               padding: 5px;
+               position: absolute;
+               bottom: -15px;
+               right: 0;
+               color: #65676B;
+               font-weight: 400;
+               cursor: pointer;">
+               <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+               <span style="margin-left: 5px;">
+                 <textarea rows="1" style="background-color: transparent; border: none; 
+                   outline: none; color: #65676B; font-size: 12px; margin-top: 5px; margin-right: 0px;
+                   resize: none; width: 23px; font-weight: normal">{{ pessoa.resposta.curtidas }} </textarea>
+                 </span>
+           </div>
+       </div>
+     </div>
+     <div style="    
+         display: inline-flex;
+         align-items: center;
+         margin-left: 35px;
+         margin-top: -15px;
+         margin-bottom: 10px;">
+       <p style="    
+           color: #919398;
+           font-size: 11px;
+           margin-right: 5px;
+           margin-left: 5px;
+           font-family: 'Roboto', sans-serif;
+           font-weight: 600;">
+       Curtir</p> <div style="   
+         width: 2px;
+         height: 2px;
+         background: #919398;
+         border-radius: 100%;"></div> 
+       <p style="    
+           color: #919398;
+           font-size: 11px;
+           margin-right: 5px;
+           margin-left: 5px;
+           font-family: 'Roboto', sans-serif;
+           font-weight: 600;">
+         Responder</p> <div style="   
+           width: 2px;
+           height: 2px;
+           background: #919398;
+           border-radius: 100%;"></div> 
+       <textarea rows="1" style="
+           background-color: 
+           transparent; border: none; 
+           outline: none; color: #65676B; 
+           font-size: 11px; margin-top: -15px; 
+           margin-right: -10px;
+           resize: none; width: 23px; 
+           font-weight: normal">{{ pessoa.resposta.tempo }} </textarea> 
+         <p style="
+               color: #919398;
+               font-size: 11px;
+               margin-right: 5px;
+               margin-left: 5px;
+               font-family: 'Roboto', sans-serif;
+               font-weight: 600;
+               font-weight: normal"> min</p>
+     </div>
+    
+  </div>
+
+
+
+
+
+
+
